@@ -5,31 +5,31 @@ import java.awt.Color;
 import static robocode.util.Utils.normalRelativeAngleDegrees;
 
 public class RonaldinhoGaucho extends AdvancedRobot {
-    boolean movendoParaFrente = true;
+    boolean movingForward = true;
 
     public void run() {
         setColors(Color.red, Color.blue, Color.green);
         setAdjustGunForRobotTurn(true);
 
         while (true) {
-            radarMovimento();
-            movimento();
+            RadarMovement();
+            Movement();
             execute();
         }
     }
 
-    void radarMovimento() {
+    private void RadarMovement() {
         turnRadarRight(360);
     }
 
-    void movimento() {
-        if (movendoParaFrente) {
+   private void Movement() {
+        if (movingForward) {
             setAhead(100);
         } else {
             setBack(100);
         }
 
-        movendoParaFrente = !movendoParaFrente;
+        movingForward = !movingForward;
     }
 
     public void onScannedRobot(ScannedRobotEvent event) {
