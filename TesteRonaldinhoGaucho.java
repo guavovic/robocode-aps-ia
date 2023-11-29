@@ -4,7 +4,7 @@ import robocode.*;
 import java.awt.Color;
 import static robocode.util.Utils.normalRelativeAngleDegrees;
 
-public class RonaldinhoGaucho extends AdvancedRobot {
+public class TesteRonaldinhoGaucho extends AdvancedRobot {
     boolean movingForward = true;
 
     public void run() {
